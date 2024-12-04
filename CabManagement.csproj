@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{65108395-6C10-4437-B3B1-1BEFFB39A595}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CabManagement</RootNamespace>
+    <AssemblyName>CabManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.cs" />
+    <Compile Include="cab_managementDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>cab_managementDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Car.cs" />
+    <Compile Include="DB.cs" />
+    <Compile Include="Customer_dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customer_dashboard.Designer.cs">
+      <DependentUpon>Customer_dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Driver_dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Driver_dashboard.Designer.cs">
+      <DependentUpon>Driver_dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_dashboard.Designer.cs">
+      <DependentUpon>Admin_dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="registercustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="registercustomer.Designer.cs">
+      <DependentUpon>registercustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewOrders.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewOrders.Designer.cs">
+      <DependentUpon>ViewOrders.cs</DependentUpon>
+    </Compile>
+    <Compile Include="placeorder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="placeorder.Designer.cs">
+      <DependentUpon>placeorder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageDrivers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageDrivers.Designer.cs">
+      <DependentUpon>ManageDrivers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageCars.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageCars.Designer.cs">
+      <DependentUpon>ManageCars.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Person.cs" />
+    <Compile Include="Order.cs" />
+    <Compile Include="Driver.cs" />
+    <Compile Include="Customer.cs" />
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin_dashboard.resx">
+      <DependentUpon>Admin_dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Customer_dashboard.resx">
+      <DependentUpon>Customer_dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Driver_dashboard.resx">
+      <DependentUpon>Driver_dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="registercustomer.resx">
+      <DependentUpon>registercustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageCars.resx">
+      <DependentUpon>ManageCars.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageDrivers.resx">
+      <DependentUpon>ManageDrivers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="placeorder.resx">
+      <DependentUpon>placeorder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ViewOrders.resx">
+      <DependentUpon>ViewOrders.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="cab_managementDataSet.xsc">
+      <DependentUpon>cab_managementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="cab_managementDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>cab_managementDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="cab_managementDataSet.xss">
+      <DependentUpon>cab_managementDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\floralpattern.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\download.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpeg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
